@@ -12,20 +12,28 @@ const { NotImplementedError } = require('../extensions/index.js');
  * stack.pop(); // undefined
  *
  */
- class Stack {
-  push(/* element */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+ class Stack { // стек в отличие от листа работает по принципу Last In First Out" (LIFO), то есть "последним зашел, первым вышел"
+
+  constructor() {
+    this.items = []
   }
 
-  pop() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  push(item) { // метод добавляет новый элемент
+
+    this.items.push(item)
+
   }
 
-  peek() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  pop() { // метод удаляет последний элемент
+
+      return this.items.pop()
+
+  }
+
+  peek() { // возвращает последний добавленный элемент, если такой есть иначе возвращает null если массив пустой
+
+    return this.items.length === 0 ? null : this.items[this.items.length - 1]
+
   }
 }
 
