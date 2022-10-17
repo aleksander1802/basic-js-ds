@@ -12,7 +12,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * stack.pop(); // undefined
  *
  */
- class Stack { // стек в отличие от листа работает по принципу Last In First Out" (LIFO), то есть "последним зашел, первым вышел"
+ class Stack { // стек работает по принципу Last In First Out" (LIFO), то есть "последним зашел, первым вышел"
 
   constructor() {
     this.items = []
